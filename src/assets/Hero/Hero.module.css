@@ -1,0 +1,39 @@
+.div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.divTxt {
+  order: 1;
+}
+.ava {
+  width: 70%;
+  border-radius: 50%;
+}
+@media only screen and (min-width: 768px) {
+  .div {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .divTxt {
+    width: 50%;
+    order: 0;
+  }
+  .ava {
+    width: 40%;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .div {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .divTxt {
+    order: 0;
+    width: 40%;
+  }
+  .ava {
+    width: 20%;
+  }
+}
