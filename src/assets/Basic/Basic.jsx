@@ -23,8 +23,8 @@ const iconMap = {
 
 export const Basic = (props) => {
   return (
-    <section className={props.className}>
-      <div className="container">
+    <section className={`${props.className} ${style.section}`}>
+      <div className={`container ${style.container}`}>
         <h2>{props.title}</h2>
         <Info
           txt={props.txt}
@@ -52,7 +52,7 @@ const Info = (props) => {
             );
           })}
         </ul>
-        <h2>Languages</h2>
+        <h2 className={style.langTitle}>Languages</h2>
         <ul className={style.languages}>
           {props.languages.map((lang) => (
             <li className={style.lang} key={lang}>

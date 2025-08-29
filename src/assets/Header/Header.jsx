@@ -5,6 +5,7 @@ import { useState } from "react";
 import { IoMenu } from "react-icons/io5";
 import { useSwipeable } from "react-swipeable";
 import { NavLink } from "react-router";
+import { IoLogoGithub } from "react-icons/io5";
 
 export const Header = (props) => {
   const [data] = useState(DATA);
@@ -34,11 +35,14 @@ export const Header = (props) => {
                   <NavLink
                     to={`/${elm.title.replace(" ", "").toLowerCase()}`}
                     className={style.itemLink}>
-                    {elm.title}
+                    <p>{elm.title}</p>
                   </NavLink>
                 </li>
               ))}
           </ul>
+          <a href="https://github.com/codescriptman" target="_blank">
+            <IoLogoGithub className={`${style.icon} ${style.git}`} />
+          </a>
         </nav>
       </div>
     </header>
