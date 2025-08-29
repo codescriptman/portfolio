@@ -16,7 +16,7 @@ const CV = (props) => (
           </span>
         </div>
       </a>
-      <a className={style.link} href="">
+      <a className={style.link} href="../../../public/img/cv/CV.pdf">
         <div className={style.div}>
           <p className={style.txt}>CV</p>{" "}
           <span>
