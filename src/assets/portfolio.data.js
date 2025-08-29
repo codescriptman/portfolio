@@ -1,4 +1,4 @@
-import avatar from "../../public/img/ava.jpeg";
+import avatar from "../../public/img/ava.webp";
 
 export const DATA = [
   {
@@ -7,8 +7,34 @@ export const DATA = [
   },
   {
     title: "Skills",
+    skills: [
+      { name: "HTML", icon: "FaHtml5" },
+      { name: "CSS", icon: "SiCsswizardry" },
+      { name: "JavaScript", icon: "IoLogoJavascript" },
+      { name: "React", icon: "FaReact" },
+      { name: "Git", icon: "FaGitAlt" },
+      { name: "GitHub", icon: "FaGithub" },
+      { name: "API", icon: "AiOutlineApi" },
+      { name: "Vite", icon: "SiVite" },
+      { name: "Dart", icon: "FaDartLang" },
+      { name: "Flutter", icon: "FaFlutter" },
+    ],
+    languages: ["English", "Polish", "Ukrainian"],
   },
-  { title: "About me" },
-  { title: "Experience" },
-  { title: "Education" },
+  {
+    title: "About me",
+    txt: "Aspiring Fullstack Developer with a strong foundation in Frontend development and a keen interest in Backend technologies. I am currently deepening my knowledge through a specialized course and am ready to apply my skills in a practical setting. My background includes self-study in mobile development, with experience in Dart and Flutter. I am a fast learner and eager to find an opportunity for professional growth in the IT industry.",
+  },
+  {
+    title: "Experience",
+    txt: "No commercial experience yet. I'm actively developing my skills and am ready to contribute to projects of any complexity. My focus is on academic and personal projects, which you can find on my GitHub profile. I'm proficient in the following technologies: JavaScript, React, Node.js, Express.",
+  },
+  {
+    title: "Education",
+    txt: [
+      "DDUVS, Bachelor of law 2013 - 2017",
+      "UJK, Master of law 2017 - 2019",
+      "GO-IT, Fullstack Developer course 2025 - nowadays",
+    ],
+  },
 ];

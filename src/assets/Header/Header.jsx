@@ -4,6 +4,7 @@ import { DATA } from "../portfolio.data";
 import { useState } from "react";
 import { IoMenu } from "react-icons/io5";
 import { useSwipeable } from "react-swipeable";
+import { NavLink } from "react-router";
 
 export const Header = (props) => {
   const [data] = useState(DATA);
@@ -30,9 +31,11 @@ export const Header = (props) => {
               .filter((elm) => elm.title)
               .map((elm) => (
                 <li key={elm.title} className={style.item}>
-                  <a href="" className={style.itemLink}>
+                  <NavLink
+                    to={`/${elm.title.replace(" ", "").toLowerCase()}`}
+                    className={style.itemLink}>
                     {elm.title}
-                  </a>
+                  </NavLink>
                 </li>
               ))}
           </ul>

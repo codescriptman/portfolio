@@ -13,6 +13,19 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -69,6 +82,18 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
 }
 /* Styles for Mobile devices */
 
@@ -79,6 +104,19 @@ button:focus-visible {
 }
 /* Styles for Tablet devices */
 @media only screen and (min-width: 768px) {
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
   .container {
     max-width: 768px;
     padding: 0 32px;
@@ -86,8 +124,24 @@ button:focus-visible {
 }
 /* Styles for Desktop devices */
 @media only screen and (min-width: 1440px) {
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
   .container {
     max-width: 1440px;
     padding: 0 64px;
+  }
+  section {
+    margin-bottom: 24px;
   }
 }
