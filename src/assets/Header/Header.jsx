@@ -4,7 +4,7 @@ import BurgerMenu from "./Burger/Burger";
 import Nav from "./Nav/Nav";
 
 const Header = (props) => {
-  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+  const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
   const isDesktopOrLaptop = useMediaQuery({ query: "(min-width: 1224px)" });
   const isBigScreen = useMediaQuery({ query: "(min-width: 1824px)" });
   const isPortrait = useMediaQuery({ query: "(orientation: portrait)" });
@@ -18,7 +18,7 @@ const Header = (props) => {
   };
 
   return (
-    <header className="border-b-1 border-black sticky">
+    <header className="border-b-1 border-black fixed top-0 left-0 bg-white w-full">
       <div className="container flex md:m-auto">
         {isMobile && <BurgerMenu handle={handle} />}
         {isMobile && (
