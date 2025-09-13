@@ -22,6 +22,7 @@ const Nav = (props) => {
               key={elm.title}
               className="p-2 m-1 hover:overflow-hidden active:rounded-4xl active:bg-blue-200 hover:rounded-4xl hover:bg-blue-200 duration-250 transition ease-in-out">
               <NavLink
+                onClick={props.handle}
                 to={`/${elm.title.replace(" ", "").toLowerCase()}`}
                 className="p-0 m-0">
                 <p className="text-xl font-medium text-center tracking-wide uppercase">

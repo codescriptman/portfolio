@@ -12,9 +12,10 @@ const Header = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handle = () => {
-    setTimeout(() => {
-      setIsOpen(true);
-    }, 700);
+    setIsOpen(true);
+  };
+  const handleClose = () => {
+    setIsOpen(false);
   };
 
   return (
@@ -31,7 +32,10 @@ const Header = (props) => {
               `}></div>
         )}
 
-        <Nav class={isOpen ? "" : "overflow-hidden -translate-y-120"} />
+        <Nav
+          class={isOpen ? "" : "overflow-hidden -translate-y-120"}
+          handle={handleClose}
+        />
       </div>
     </header>
   );
