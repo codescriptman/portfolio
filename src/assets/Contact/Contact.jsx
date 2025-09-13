@@ -45,32 +45,51 @@ const Contact = (props) => {
         console.error(error);
       });
     e.target.reset();
+    setBtnDisabled(true);
   };
   return (
     <section className="bg-blue-50">
-      <div className="container m-auto  pt-10 pl-5 pr-5  pb-5">
-        <form className="flex flex-col gap-2" onSubmit={handleSubmit}>
-          <label htmlFor="tel">tel</label>
+      <div className="container m-auto  pt-10 pl-5 pr-5  pb-5  lg:flex lg:flex-col lg:items-center  ">
+        <h3 className="mb-10 text-4xl font-extrabold">Contact with me</h3>
+        <form
+          className="flex flex-col gap-2 p-0 lg:items-center lg:w-fit lg:h-fit "
+          onSubmit={handleSubmit}>
+          <label className="self-start" htmlFor="tel">
+            tel
+          </label>
           <input
             onInput={handleTel}
-            className="border p-2 bg-white"
-            type="number"
+            className=" border-2 border-black p-2 bg-white rounded-md
+             appearance-none
+             focus:outline-none focus:shadow-none focus:ring-0 focus:border-blue-900
+             transition lg:w-full"
+            type="tel"
             name="tel"
             id="tel"
           />
-          <label htmlFor="email">email</label>
+          <label className="self-start" htmlFor="email">
+            email
+          </label>
           <input
             onInput={handleEmail}
-            className="border p-2 bg-white"
+            className="border-2 border-black p-2 bg-white rounded-md
+             appearance-none
+             focus:outline-none focus:shadow-none focus:ring-0 focus:border-blue-900
+             transition lg:w-full"
             type="email"
             name="email"
             id="email"
           />
 
-          <label htmlFor="message">Contact with me</label>
+          <label className="self-start" htmlFor="message">
+            Contact with me
+          </label>
           <textarea
             onInput={handleMessage}
-            className="border p-2 bg-white"
+            className="border-2 border-black p-2 bg-white rounded-md
+             appearance-none
+             focus:outline-none focus:shadow-none focus:ring-0 focus:border-blue-900
+             transition lg:w-full resize-none"
             id="message"
             name="message"
             rows="5"
@@ -80,7 +99,7 @@ const Contact = (props) => {
             disabled={btnDisabled}
             type="submit"
             className={
-              "uppercase border font-bold bg-blue-300 active:bg-blue-500 disabled:bg-gray-300 disabled:text-gray-600"
+              "w-20 p-2 uppercase rounded-2xl font-bold bg-blue-400 active:bg-blue-600 disabled:bg-gray-300 disabled:text-gray-600 transition duration-200"
             }>
             send
           </button>

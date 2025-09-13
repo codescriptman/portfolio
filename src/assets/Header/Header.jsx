@@ -19,7 +19,7 @@ const Header = (props) => {
   };
 
   return (
-    <header className="border-b-1 border-black fixed top-0 left-0 bg-white w-full">
+    <header className="border-b-1 border-black fixed top-0 left-0 bg-white w-full z-10">
       <div className="container flex md:m-auto">
         {isMobile && <BurgerMenu handle={handle} />}
         {isMobile && (
