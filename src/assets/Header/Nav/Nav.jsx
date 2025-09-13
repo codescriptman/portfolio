@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { DATA } from "../../portfolio.data";
 import { useState } from "react";
 import { NavLink } from "react-router";
@@ -6,6 +6,7 @@ import Socicns from "../../Socicns/Socicns";
 
 const Nav = (props) => {
   const [data] = useState(DATA);
+
   return (
     <nav
       className={`${props.class} border-b-1 border-black  w-full fixed 
@@ -23,7 +24,7 @@ const Nav = (props) => {
               className="p-2 m-1 hover:overflow-hidden active:rounded-4xl active:bg-blue-200 hover:rounded-4xl hover:bg-blue-200 duration-250 transition ease-in-out">
               <NavLink
                 onClick={props.handle}
-                to={`/${elm.title.replace(" ", "").toLowerCase()}`}
+                to={`/${elm.title.replace(" ", "").toLowerCase()}#skills`}
                 className="p-0 m-0">
                 <p className="text-xl font-medium text-center tracking-wide uppercase">
                   {elm.title}

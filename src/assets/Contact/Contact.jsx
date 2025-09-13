@@ -7,10 +7,10 @@ const Contact = (props) => {
   const [message, setMessage] = useState("");
   const [submit, setSubmit] = useState();
   const [btnDisabled, setBtnDisabled] = useState(true);
-
+  //   useEffect(() => {}, [tel, email, message]);
   useEffect(() => {
     setBtnDisabled(true);
-    if (tel !== "" && email !== "" && message !== "") {
+    if (tel !== "" && email !== "" && email.includes("@") && message !== "") {
       setBtnDisabled(false);
     }
     return () => {};
@@ -45,7 +45,7 @@ const Contact = (props) => {
         console.error(error);
       });
     e.target.reset();
-    setBtnDisabled(true);
+    return [setTel(""), setEmail(""), setMessage("")];
   };
   return (
     <section className="bg-blue-50">
@@ -98,9 +98,7 @@ const Contact = (props) => {
           <button
             disabled={btnDisabled}
             type="submit"
-            className={
-              "w-20 p-2 uppercase rounded-2xl font-bold bg-blue-400 active:bg-blue-600 disabled:bg-gray-300 disabled:text-gray-600 transition duration-200"
-            }>
+            className="hover:bg-blue-500 w-20 p-2 uppercase rounded-2xl font-bold bg-blue-400 active:bg-blue-600 disabled:bg-gray-300 disabled:text-gray-600 transition duration-200 focus:bg-blue-600 focus:text-white cursor-pointer">
             send
           </button>
         </form>
