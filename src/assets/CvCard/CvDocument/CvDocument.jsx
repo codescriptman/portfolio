@@ -7,7 +7,6 @@ const CvDocument = (props) => {
   const data = props.res;
 
   const printRef = useRef(null);
-  console.log(data);
 
   const handleDownloadPdf = async () => {
     const element = printRef.current;

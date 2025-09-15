@@ -24,9 +24,7 @@ const Cv = (props) => {
   const [res, setRes] = useState();
   useEffect(() => {
     catchErr();
-    setTimeout(() => {
-      handle();
-    }, 3000);
+    handle();
     return () => {};
   }, []);
 
