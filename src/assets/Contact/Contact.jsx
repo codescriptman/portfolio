@@ -98,7 +98,7 @@ const Contact = (props) => {
           <button
             disabled={btnDisabled}
             type="submit"
-            className="hover:bg-blue-500 w-20 p-2 uppercase rounded-2xl font-bold bg-blue-400 active:bg-blue-600 disabled:bg-gray-300 disabled:text-gray-600 transition duration-200 focus:bg-blue-600 focus:text-white cursor-pointer">
+            className="hover:bg-blue-500 w-20 p-2 uppercase rounded-2xl font-bold bg-blue-400 active:bg-blue-600 disabled:bg-gray-300 disabled:text-gray-600 disabled:cursor-auto transition duration-200 focus:bg-blue-600 focus:text-white cursor-pointer">
             send
           </button>
         </form>

@@ -1,4 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Story+Script&display=swap");
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Story+Script&display=swap");
+
+@theme {
+  --font-CV-title: Story Script, sans-serif;
+  --font-CV-text: Roboto, sans-serif;
+}
 
 body {
   background-color: white;

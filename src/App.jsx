@@ -3,10 +3,10 @@ import Header from "./assets/Header/Header";
 import Hero from "./assets/Hero/Hero";
 import { Routes, Route } from "react-router";
 import Footer from "./assets/Footer/Footer.jsx";
-import CV from "./assets/CV/CV.jsx";
 import "./index.css";
 import Skills from "./assets/Skills/Skills.jsx";
 import Contact from "./assets/Contact/Contact.jsx";
+import CvCard from "./assets/CvCard/CvCard.jsx";
 
 function App() {
   return (
@@ -16,9 +16,10 @@ function App() {
       <Routes>
         <Route path="skills" element={<Skills />} />
       </Routes>
+      <CvCard />
       <Contact />
-      {/* <CV />
-      <Footer /> */}
+
+      <Footer />
     </>
   );
 }
