@@ -24,12 +24,10 @@ const Cv = (props) => {
   const [res, setRes] = useState();
   useEffect(() => {
     catchErr();
-
-    return () => {
-      setTimeout(() => {
-        handle();
-      }, 3000);
-    };
+    setTimeout(() => {
+      handle();
+    }, 3000);
+    return () => {};
   }, []);
 
   const handle = () => {
