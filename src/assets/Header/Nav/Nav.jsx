@@ -1,11 +1,29 @@
-import React, { useEffect, useRef } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import { DATA } from "../../portfolio.data";
 import { useState } from "react";
 import { NavLink } from "react-router";
 import Socicns from "../../Socicns/Socicns";
+import { RefContext } from "../../../App";
 
 const Nav = (props) => {
+  const navItem = useContext(RefContext);
   const [data] = useState(DATA);
+
+  const scrollToComponent = () => {
+    const section = navItem.current;
+    if (!section) {
+      return;
+    }
+    setTimeout(() => {
+      const rect = section.getBoundingClientRect();
+      if (rect.bottom < 0 || rect.top > window.innerHeight) {
+        section.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        });
+      }
+    }, 400);
+  };
 
   return (
     <nav
@@ -23,7 +41,11 @@ const Nav = (props) => {
               key={elm.title}
               className="p-2 m-1 hover:overflow-hidden active:rounded-4xl active:bg-blue-200 hover:rounded-4xl hover:bg-blue-200 duration-250 transition ease-in-out">
               <NavLink
-                onClick={props.handle}
+                state={"render"}
+                onClick={() => {
+                  props.handle();
+                  scrollToComponent();
+                }}
                 to={`/${elm.title.replace(" ", "").toLowerCase()}`}
                 className="p-0 m-0">
                 <p className="text-xl font-medium text-center tracking-wide uppercase">

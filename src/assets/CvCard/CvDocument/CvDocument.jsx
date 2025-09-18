@@ -1,7 +1,6 @@
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
-import React, { useEffect, useRef } from "react";
-import { data } from "react-router";
+import React, { useRef } from "react";
 
 const CvDocument = (props) => {
   const data = props.res;

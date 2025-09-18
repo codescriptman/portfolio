@@ -2,12 +2,30 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
-import { BrowserRouter } from "react-router";
+import { createBrowserRouter, RouterProvider } from "react-router";
+import Skills from "./assets/Skills/Skills.jsx";
+// import { RouterProvider } from "react-router/dom";
+
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <App />,
+      children: [
+        {
+          path: "/skills",
+          element: <Skills />,
+        },
+      ],
+    },
+  ],
+  {
+    basename: "/portfolio",
+  }
+);
 
 createRoot(document.getElementById("root")).render(
-  <BrowserRouter>
-    <StrictMode>
-      <App />
-    </StrictMode>
-  </BrowserRouter>
+  <StrictMode>
+    <RouterProvider router={router} />
+  </StrictMode>
 );
